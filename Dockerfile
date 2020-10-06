@@ -5,7 +5,7 @@ FROM base as builder
 RUN mkdir /install
 WORKDIR /install
 
-RUN pip install --prefix=/install --no-cache-dir --no-warn-script-location tokendito mintotp
+RUN pip install --prefix=/install --no-cache-dir --no-warn-script-location git+ssh://git@github.com/salscode/tokendito.git mintotp
 
 FROM base
 COPY --from=builder /install /usr/local
