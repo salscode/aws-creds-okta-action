@@ -9,7 +9,7 @@ RUN apt-get update && \
 RUN mkdir /install
 WORKDIR /install
 
-RUN pip install --prefix=/install --no-cache-dir --no-warn-script-location git+https://git@github.com/salscode/tokendito.git mintotp
+RUN pip install --prefix=/install --no-cache-dir --no-warn-script-location git+https://git@github.com/salscode/tokendito.git@feature/no-mfa mintotp
 
 FROM base
 COPY --from=builder /install /usr/local
