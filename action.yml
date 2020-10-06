@@ -1,4 +1,4 @@
-name: "AWS Credentials Via Okta"
+name: "AWS Credentials Via Okta (no MFA)"
 description: "Get temporary AWS credentials (using STS) from your Okta profile."
 inputs:
   aws_role_arn:
