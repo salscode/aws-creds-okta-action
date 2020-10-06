@@ -2,6 +2,10 @@ FROM python:3.8-slim as base
 
 FROM base as builder
 
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
 RUN mkdir /install
 WORKDIR /install
 
